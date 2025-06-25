@@ -56,7 +56,7 @@ if game_mode in ["N+2", "N+3", "N+4"]:
 
         # Suggested starting number of thresholds
         if chosen_default == "Wesley":
-            initial_thr = 1
+            initial_thr = 0
         elif chosen_default == "N+3, 1/1/(3) 2x@3":
             initial_thr = 1
         elif chosen_default == "1/2 5 2x@3":
