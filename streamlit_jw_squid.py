@@ -26,7 +26,7 @@ with top_col1:
     game_mode = st.selectbox(
         "Side‑Game Format",
         ["N+2", "N+3", "N+4", "Dino", "Infinite"],
-        index=0,
+        index=1,
         key="game_mode_select"
     )
 
@@ -34,7 +34,7 @@ with top_col1:
 with top_col2:
     squid_value = st.number_input(
         "Squid Value",
-        value=2.5,
+        value=1.0,
         step=0.5,
         min_value=0.0,
         key="squid_value_input"
@@ -52,7 +52,7 @@ if game_mode in ["N+2", "N+3", "N+4"]:
             "Tui",
             "None",
         ]
-        chosen_default = st.selectbox("Defaults", defaults_options, index=0)
+        chosen_default = st.selectbox("Defaults", defaults_options, index=6)
 
         # Suggested starting number of thresholds
         if chosen_default == "Wesley":
