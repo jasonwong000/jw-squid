@@ -52,7 +52,7 @@ if game_mode in ["N+2", "N+3", "N+4"]:
             "Tui",
             "None",
         ]
-        chosen_default = st.selectbox("Defaults", defaults_options, index=5)
+        chosen_default = st.selectbox("Defaults", defaults_options, index=1)
 
         # Suggested starting number of thresholds
         if chosen_default == "Wesley":
@@ -124,7 +124,7 @@ else:
 ###############################################################################
 N = st.number_input(
     "Number of Players (N)",
-    value=8,
+    value=6,
     min_value=1,
     step=1
 )
