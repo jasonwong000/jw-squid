@@ -34,7 +34,7 @@ with top_col1:
 with top_col2:
     squid_value = st.number_input(
         "Squid Value",
-        value=1.0,
+        value=1.25,
         step=0.5,
         min_value=0.0,
         key="squid_value_input"
@@ -52,7 +52,8 @@ if game_mode in ["N+2", "N+3", "N+4"]:
             "Tui",
             "None",
         ]
-        chosen_default = st.selectbox("Defaults", defaults_options, index=1)
+        chosen_default = st.selectbox("Defaults", defaults_ioptions, index=1
+                                     5)
 
         # Suggested starting number of thresholds
         if chosen_default == "Wesley":
@@ -508,3 +509,4 @@ if st.session_state["results_table"] is not None:
     st.dataframe(combined_df, use_container_width=True)
 else:
     st.info("Results will appear here after “Compute Incentives Now”.")
+
