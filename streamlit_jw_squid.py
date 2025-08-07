@@ -66,7 +66,7 @@ if game_mode in ["N+2", "N+3", "N+4"]:
         elif chosen_default == "Tui":
             initial_thr = 4
         else:
-            initial_thr = 1
+            initial_thr = 0
 
         num_thr = st.number_input(
             "How many thresholds?",
@@ -124,7 +124,7 @@ else:
 ###############################################################################
 N = st.number_input(
     "Number of Players (N)",
-    value=6,
+    value=9,
     min_value=1,
     step=1
 )
@@ -508,6 +508,7 @@ if st.session_state["results_table"] is not None:
     st.dataframe(combined_df, use_container_width=True)
 else:
     st.info("Results will appear here after “Compute Incentives Now”.")
+
 
 
 
