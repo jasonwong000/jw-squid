@@ -52,7 +52,7 @@ if game_mode in ["N+2", "N+3", "N+4"]:
             "Tui",
             "None",
         ]
-        chosen_default = st.selectbox("Defaults", defaults_ioptions, index=5)
+        chosen_default = st.selectbox("Defaults", defaults_options, index=5)
 
         # Suggested starting number of thresholds
         if chosen_default == "Wesley":
@@ -508,5 +508,6 @@ if st.session_state["results_table"] is not None:
     st.dataframe(combined_df, use_container_width=True)
 else:
     st.info("Results will appear here after “Compute Incentives Now”.")
+
 
 
