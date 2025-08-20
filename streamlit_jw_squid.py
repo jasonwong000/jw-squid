@@ -26,7 +26,7 @@ with top_col1:
     game_mode = st.selectbox(
         "Side‑Game Format",
         ["N+2", "N+3", "N+4", "Dino", "Infinite"],
-        index=1,
+        index=0,
         key="game_mode_select"
     )
 
@@ -34,7 +34,7 @@ with top_col1:
 with top_col2:
     squid_value = st.number_input(
         "Squid Value",
-        value=1.25,
+        value=3,
         step=0.5,
         min_value=0.0,
         key="squid_value_input"
@@ -124,7 +124,7 @@ else:
 ###############################################################################
 N = st.number_input(
     "Number of Players (N)",
-    value=9,
+    value=6,
     min_value=1,
     step=1
 )
@@ -508,6 +508,7 @@ if st.session_state["results_table"] is not None:
     st.dataframe(combined_df, use_container_width=True)
 else:
     st.info("Results will appear here after “Compute Incentives Now”.")
+
 
 
 
