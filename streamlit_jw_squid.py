@@ -34,7 +34,7 @@ with top_col1:
 with top_col2:
     squid_value = st.number_input(
         "Squid Value",
-        value=3,
+        value=3.0,
         step=0.5,
         min_value=0.0,
         key="squid_value_input"
@@ -508,6 +508,7 @@ if st.session_state["results_table"] is not None:
     st.dataframe(combined_df, use_container_width=True)
 else:
     st.info("Results will appear here after “Compute Incentives Now”.")
+
 
 
 
