@@ -26,7 +26,7 @@ with top_col1:
     game_mode = st.selectbox(
         "Side‑Game Format",
         ["N+2", "N+3", "N+4", "Dino", "Infinite"],
-        index=0,
+        index=1,
         key="game_mode_select"
     )
 
@@ -124,7 +124,7 @@ else:
 ###############################################################################
 N = st.number_input(
     "Number of Players (N)",
-    value=6,
+    value=8,
     min_value=1,
     step=1
 )
@@ -508,6 +508,7 @@ if st.session_state["results_table"] is not None:
     st.dataframe(combined_df, use_container_width=True)
 else:
     st.info("Results will appear here after “Compute Incentives Now”.")
+
 
 
 
